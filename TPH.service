@@ -1,0 +1,10 @@
+[Unit]
+Description=Sense HAT TPH display.
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/gen32/sense_hat/TPH.py
+
+[Install]
+WantedBy=multi-user.target
