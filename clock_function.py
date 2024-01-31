@@ -77,11 +77,10 @@ def GpClock(sense: SenseHat):
         index = 0
         for index_loop in range(0, 4):
             for counter_loop in range(0, 4):
-                if (hour >= 10):
-                    clock_image[index] = number[int(hour/10)*16+pixel_offset]
-                    clock_image[index+4] = number[int(hour%10)*16+pixel_offset]
-                    clock_image[index+32] = number[int(minute/10)*16+pixel_offset]
-                    clock_image[index+36] = number[int(minute%10)*16+pixel_offset]
+                clock_image[index] = number[int(hour/10)*16+pixel_offset]
+                clock_image[index+4] = number[int(hour%10)*16+pixel_offset]
+                clock_image[index+32] = number[int(minute/10)*16+pixel_offset]
+                clock_image[index+36] = number[int(minute%10)*16+pixel_offset]
                 pixel_offset = pixel_offset + 1
                 index = index + 1
             index = index + 4
